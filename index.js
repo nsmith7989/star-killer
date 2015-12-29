@@ -1,7 +1,8 @@
+#! /usr/bin/env node
+
 var npm = require('npm');
 var fs = require('fs');
 var pkgJson = require(process.cwd() + '/package.json');
-
 
 function updateDeps(dependencyObject, data) {
 
