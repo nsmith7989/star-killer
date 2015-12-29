@@ -1,0 +1,25 @@
+{
+  "name": "death-star",
+  "version": "1.0.0",
+  "description": "Update all start dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsmith7989/star-killer"
+  },
+  "keywords": [
+    "Star"
+  ],
+  "author": "Nathanael Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nsmith7989/star-killer/issues"
+  },
+  "homepage": "https://github.com/nsmith7989/star-killer#readme",
+  "dependencies": {
+    "npm": "^3.5.2"
+  }
+}
