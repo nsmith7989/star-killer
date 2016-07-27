@@ -6,7 +6,7 @@ var pkgJson = require(process.cwd() + '/package.json');
 
 function updateDeps(dependencyObject, data) {
 
-    if (!Object.keys(dependencyObject).length) return;
+    if (typeof dependencyObject !== 'object' || !Object.keys(dependencyObject).length) return;
 
     return Object.keys(dependencyObject).reduce(function (prev, key) {
 
