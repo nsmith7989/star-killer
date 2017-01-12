@@ -1,6 +1,6 @@
 {
   "name": "star-killer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Update all start dependencies",
   "main": "index.js",
   "scripts": {
