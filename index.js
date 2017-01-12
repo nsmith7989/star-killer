@@ -9,16 +9,19 @@ function updateDeps(dependencyObject, data) {
     if (typeof dependencyObject !== 'object' || !Object.keys(dependencyObject).length) return;
 
     return Object.keys(dependencyObject).reduce(function (prev, key) {
-
-        if (dependencyObject[key] === '*') {
-            // lookup the correct version number
-            prev[key] = data.dependencies[key].version;
+        if (data.dependencies[key] != undefined) {
+            if (dependencyObject[key] === "*") {
+                // lookup the correct version number
+                prev[key] = data.dependencies[key].version;
+            } else {
+                //otherwise keep it as is
+                prev[key] = dependencyObject[key];
+            }
+            return prev;
         } else {
-            //otherwise keep it as is
-            prev[key] = dependencyObject[key];
+            throw new Error("Getting an undefined error on a value for your dependencies.\nCheck two things:\n1.) Validate you have run npm install at least once inside your repository's directory.\n2.) Validate you have a dependencies and devDependencies and that they both have at least 1 key and value inside them.");
         }
-
-        return prev;
+        
     }, {});
 
 }

@@ -9,4 +9,7 @@ Star Killer is a simple node package. Install globally:
 
 # Usage
 
-In any project where you want to kill stars, navigate in the command line to the directory that contains your package.json and run `star-killer`. That's it. You're done.
+1.) Validate that you have run `npm install` at least once inside your project that contains your package.json.
+2.) Validate that you have a `devDependencies` and `dependencies` inside your package.json.
+3.) Validate that each of those two things have at least one key and value.
+4.) Lastly, in any project where you want to kill star dependencies, navigate in the command line to the directory that contains your package.json and run `star-killer`. That's it. You're done.
